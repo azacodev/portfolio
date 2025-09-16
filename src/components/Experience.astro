@@ -1,0 +1,45 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Sept. 2017 – Aug. 2022",
+    title: "SOFTWARE ENGINEERING",
+    subtitle: "Universidad Autónoma de Sinaloa",
+    description:
+      "Learned different methodologies, programming languages like C, C++, C#, Java, JavaScript, MSQL, MySQL, Python, PHP, etc.",
+  },
+  {
+    date: "Oct. 2020 – Mar. 2021",
+    title: "FRONT-END DEVELOPER",
+    subtitle: "Adroit Overseas",
+    description:
+      "Developed and maintained responsive CRM system using Angular, Git, SCSS, Bootstrap and SCRUM, implementing different libraries like Angular Material, Chart.js",
+  },
+  {
+    date: "Mar. 2021 – Feb. 2025",
+    title: "FULL STACK DEVELOPER",
+    subtitle: "Parallel Design Agency SA de CV",
+    description:
+      "Developed, maintained, and improved different web and mobile software like PWA sites, E-commerce, CRM, Logistics, Sales systems. Using Angular, Sails.js, NestJS, Ionic, MySQL, Flutter, Mongo, SCRUM, Docker, etc. ",
+  },
+  {
+    date: "Mar. 2025 – Present",
+    title: "FULL STACK DEVELOPER",
+    subtitle: "Sofipa Corporation",
+    description:
+      "Developed a CRM system mostly using Angular Framework, Tailwind css, and also some Spring Framework for back-end.",
+  },
+];
+---
+
+
+<ol class="relative border-s-2 border-black">
+  {
+    EXPERIENCE.map((item) => (
+      <li class="mb-10 ms-6">
+        <ExperienceItem {...item} />
+      </li>
+    ))
+  }
+</ol>

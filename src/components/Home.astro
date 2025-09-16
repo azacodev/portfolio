@@ -1,0 +1,26 @@
+---
+import SocialBadge from "./SocialBadge.astro";
+import GithubIcon from "../icons/GitHub.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import MailIcon from "../icons/Mail.astro";
+---
+
+<div class="size-full flex flex-col justify-center items-center gap-4">
+  <span class="text-6xl text-center">Hola, soy Azael Rivera</span>
+  <span class="text-2xl text-center">
+    Desarrollador Web Full Stack con +5 años de experiencia.
+  </span>
+
+  <nav class="flex flex-wrap justify-center gap-4">
+    <SocialBadge
+      href="https://www.linkedin.com/in/abner-azael-rivera-ruiz-81b575295/"
+      ><LinkedInIcon class="size-6" /> LinkedIn
+    </SocialBadge>
+    <SocialBadge href="https://github.com/azacodev"
+      ><GithubIcon class="size-6" /> GitHub
+    </SocialBadge>
+    <SocialBadge href="mailto:azariv99@outlook.com"
+      ><MailIcon class="size-6" /> azariv99@outlook.com
+    </SocialBadge>
+  </nav>
+</div>

@@ -1,11 +1,41 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Background from "../components/Background.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Home from "../components/Home.astro";
+import Footer from "../components/Footer.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Portfolio | Azacodev ">
+  <Background />
+
+  <main class="px-4 flex flex-col">
+    <SectionContainer class="container max-w-4xl mx-auto flex items-center min-h-screen">
+      <Home />
+    </SectionContainer>
+
+    <SectionContainer id="experience" class="container max-w-4xl mx-auto py-8 min-h-screen">
+      <h1 class="mb-8">Experiencia</h1>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects" class="container max-w-4xl mx-auto py-8 min-h-screen">
+      <h1 class="mb-8">Proyectos</h1>
+    </SectionContainer>
+
+    <SectionContainer id="about" class="container max-w-4xl mx-auto py-8 min-h-screen">
+      <h1 class="mb-8">Sobre Mí</h1>
+    </SectionContainer>
+
+    <SectionContainer id="contact" class="container max-w-4xl mx-auto py-8 min-h-screen">
+      <h1 class="mb-8">Contacto</h1>
+    </SectionContainer>
+
+    <Footer />
+  </main>
 </Layout>
