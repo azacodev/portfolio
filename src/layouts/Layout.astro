@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -10,9 +11,10 @@ import Header from "../components/Header.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title}</title>
+    <ClientRouter />
   </head>
   <body>
-    <Header class="fixed top-0 h-24 bg-white z-50" />
+    <Header class="fixed top-0 h-24 bg-white z-50" transition:name="none"/>
     <slot />
   </body>
 </html>

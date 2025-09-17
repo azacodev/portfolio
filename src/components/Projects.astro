@@ -1,0 +1,32 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+
+const PROJECTS = [
+  {
+    title: "Control Bibliotecario",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    link: "https://example.com/proyecto1",
+    technologies: ["JS", "HTML", "CSS"],
+    image: "",
+  },
+  {
+    title: "Racelabs",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    link: "https://example.com/proyecto1",
+    technologies: ["JS", "HTML", "CSS"],
+    image: "",
+  },
+];
+---
+
+<ol class="flex flex-col gap-16">
+  {
+    PROJECTS.map((project, idx) => (
+      <li>
+        <ProjectItem {...project} class={idx % 2 ? `flex-row-reverse` : ``} />
+      </li>
+    ))
+  }
+</ol>
